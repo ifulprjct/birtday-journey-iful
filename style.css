@@ -1,0 +1,390 @@
+body {
+        background-image: url("../assets/background.jpg") ;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+        font-family: Arial, sans-serif;
+    }
+
+#opening-text {
+        display: inline-block;
+        width: 100%;
+        max-width: 320px;
+        margin: 20px auto ;
+        text-align: center ;
+        line-height: 1.6;
+        min-height: 3.2em ;
+    }
+    
+#opening-text span {
+        border-right: 2px solid white ;
+        animation: blink 0.7s infinite ;
+    }
+@keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+    
+.photo-container {
+    position: relative;
+    width: 220px;
+    margin: 40px auto;
+}
+
+.profile-photo {
+    width: 100%;
+    border-radius: 25%;
+    border: 4px solid white;
+    display: block;
+}
+
+.birthday-hat {
+    position: absolute;
+    width: 100px;
+    top: 50px;
+    left: 52%;
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+
+    animation: hatPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes hatPulse {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.2);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+h1 {
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        violet,
+        red
+    );
+
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: rgbTitle 5s linear infinite;
+
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(0, 255, 255, 0.7),
+        0 0 30px rgba(255, 0, 255, 0.6);
+}
+
+@keyframes rgbTitle {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 300%;
+    }
+}
+
+#opening-text {
+    color: #00bfff;
+
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #0080ff,
+        0 0 20px #0000ff;
+        
+        font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.profile-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-info h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    text-shadow:
+        0 0 5px cyan,
+        0 0 15px blue;
+    letter-spacing: 2px;
+}
+
+.profile-info p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    color: #00bfff;
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 15px blue;
+    margin-top: 8px;
+}
+
+.comment-section {
+    max-width: 400px;
+    margin: 100px auto 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.comment-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-shadow: 0 0 10px cyan, 0 0 20px blue;
+}
+
+.comment-section p {
+    color: #00bfff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+#comment-form input,
+#comment-form textarea {
+    padding: 12px;
+    border: 1px solid #00bfff;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#comment-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#comment-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #008cff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px #008cff;
+}
+
+#comment-list {
+    margin-top: 25px;
+    text-align: left;
+}
+
+/* ==========================
+   OPENING SCREEN
+========================== */
+
+.opening-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(0, 150, 220, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #020711,
+            #071525,
+            #010409
+        );
+}
+
+/* CAHAYA ABSTRAK */
+
+.opening-screen::before {
+    content: "";
+
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    background: rgba(0, 180, 255, 0.12);
+
+    filter: blur(100px);
+    border-radius: 50%;
+}
+
+/* KONTEN */
+
+.opening-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 45px;
+}
+
+/* ANIMASI KEMUNCULAN LOGO */
+
+.logo-frame {
+    opacity: 0;
+    transform: scale(0.2);
+
+    animation: logoIntro 1.5s ease-out forwards;
+}
+
+@keyframes logoIntro {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ANIMASI DENYUT LOGO */
+
+.opening-logo {
+    width: 180px;
+    max-width: 55vw;
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 10px rgba(0, 190, 255, 0.5))
+        drop-shadow(0 0 25px rgba(0, 120, 255, 0.3));
+
+    animation: logoPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+/* TOMBOL BUKA */
+
+#open-button {
+    padding: 13px 45px;
+
+    background: rgba(0, 20, 40, 0.4);
+
+    border: 1px solid #00bfff;
+    border-radius: 30px;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px rgba(0, 191, 255, 0.3),
+        inset 0 0 10px rgba(0, 191, 255, 0.1);
+
+    opacity: 0;
+
+    animation: buttonIntro 1s ease forwards;
+    animation-delay: 1.5s;
+
+    transition: 0.3s;
+}
+
+@keyframes buttonIntro {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* EFEK SAAT TOMBOL DISENTUH */
+
+#open-button:hover,
+#open-button:active {
+    background: #008cff;
+
+    box-shadow:
+        0 0 15px #00bfff,
+        0 0 30px #008cff;
+
+    transform: scale(1.05);
+}
+
+/* TRANSISI KELUAR */
+
+.opening-screen.is-closing {
+    animation: openingExit 0.9s ease forwards;
+}
+
+@keyframes openingExit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+/* MENCEGAH SCROLL SAAT OPENING AKTIF */
+
+body.opening-active {
+    overflow: hidden;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Birthday Journey iful</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <body class="opening-active">
+
+    <!-- OPENING SCREEN -->
+    <section class="opening-screen" id="opening-screen">
+
+        <div class="opening-content">
+
+            <div class="logo-frame">
+                <img 
+                    src="assets/iful logo.png" 
+                    alt="Personal Logo"
+                    class="opening-logo"
+                >
+            </div>
+
+            <button id="open-button" type="button">
+                BUKA
+            </button>
+
+        </div>
+
+    </section>
+    
+    <h1>BIRTHDAY JOURNEY</h1>
+    <p id="opening-text">
+        <span></span>
+    </p>
+        
+ <div class="photo-container">
+
+    <img src="assets/foto iful.jpg"
+         alt="Syaiful Allah"
+         class="profile-photo">
+         
+    <img src="assets/topu ultah.png"
+         alt="Topi ulang tahun"
+         class="birthday-hat">
+
+ </div>
+ 
+ <div class="profile-info">
+    <h2>SYAIFUL ALLAH</h2>
+    <p>28 November 2006</p>
+</div>
+
+<section class="comment-section">
+
+    <h2>A massage for me</h2>
+
+    <p>Write something for my birthday!</p>
+
+    <form id="comment-form">
+
+        <input 
+            type="text" 
+            id="guest-name" 
+            placeholder="Your Name"
+            required
+        >
+
+        <textarea 
+            id="guest-message" 
+            placeholder="Write your wishes here..."
+            required
+        ></textarea>
+
+        <button type="submit">Send Wishes</button>
+
+    </form>
+
+    <div id="comment-list"></div>
+
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
